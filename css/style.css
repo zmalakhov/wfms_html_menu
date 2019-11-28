@@ -50,7 +50,7 @@ html {
     width: 45px;
     height: 32px;
     margin-left: auto;
-    display: block;
+    display: none;
     border: none;
     background-color: transparent;
     -moz-appearance: none;
@@ -69,10 +69,45 @@ html {
     height: 5px;
     display: block;
     background-color: #fff;
-
 }
 
+@media (max-width: 780px) {
 
+    .menu {
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+
+    .menu__list {
+        display: none;
+    }
+
+    .menu_hamburger {
+        display: block;
+    }
+
+    .menu__link {
+        padding: 10px 0;
+    }
+    .menu__link:hover {
+        background-color: transparent;
+    }
+
+    .menu--active .menu_hamburger span {
+        display: none;
+    }
+
+    .menu--active .menu_hamburger::before {
+        transform: rotate(-45deg) translate(-3px, 3px);
+    }
+    .menu--active .menu_hamburger::after {
+        transform: rotate(45deg);
+    }
+    .menu--active .menu__list {
+        display: block;
+    }
+
+}
 
 
 
